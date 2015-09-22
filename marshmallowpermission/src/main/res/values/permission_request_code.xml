@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="single_request_code">6050</integer>
+    <integer name="multiple_request_code">6051</integer>
+
+</resources>

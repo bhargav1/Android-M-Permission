@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/bhargavsuthar/AndroidExternalLib/MobiquityPermissionDemo/app/build/intermediates/exploded-aar/MobiquityPermissionDemo/marshmallowpermission/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f4d07ab25f9832019b33796d0c636b05b190a10b">
+        <dex dex="/Users/bhargavsuthar/AndroidExternalLib/MobiquityPermissionDemo/app/build/intermediates/pre-dexed/debug/classes-fb03c2f187aef4bef3ffd1b6dd37fb0d1554b23e.jar" />
+    </item>
+
+</items>
