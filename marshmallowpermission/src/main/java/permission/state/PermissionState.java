@@ -1,14 +1,12 @@
 package permission.state;
 
-import java.util.List;
-
 /**
  * Created by bhargavsuthar on 9/22/15.
  */
 public class PermissionState {
 
-    public List<String> grantedPermissionList;
-    public List<String> notGrantedPermissionList;
+   /* private List<String> grantedPermissionList;
+    private List<String> notGrantedPermissionList;
 
     public List<String> getNotGrantedPermissionList() {
         return notGrantedPermissionList;
@@ -24,5 +22,5 @@ public class PermissionState {
 
     public void setGrantedPermissionList(List<String> grantedPermissionList) {
         this.grantedPermissionList = grantedPermissionList;
-    }
+    }*/
 }

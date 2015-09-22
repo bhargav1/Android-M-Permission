@@ -15,11 +15,11 @@ import java.util.List;
 public class PermissionUtil {
 
 
-    public static List<String> getListOfGrantedPermission(){
+    private static List<String> getListOfGrantedPermission(){
         return null;
     }
 
-    public static List<String> getListOfNotGrandtedPermission() {
+    private static List<String> getListOfNotGrandtedPermission() {
         return null;
     }
 
@@ -33,13 +33,13 @@ public class PermissionUtil {
     }
 
     @TargetApi(23)
-    public static boolean hasSelfPermission(Activity activity, String[] permissions) {
+    public static boolean hasSelfPermission(Activity mActivity, String[] permissions) {
         if (!isMNC()) {
             return true;
         }
 
         for (String permission : permissions) {
-            if (activity.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
+            if (mActivity.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
                 return false;
             }
         }
@@ -48,11 +48,11 @@ public class PermissionUtil {
     }
 
     @TargetApi(23)
-    public static boolean hasSelfPermission(Activity activity, String permission) {
+    public static boolean hasSelfPermission(Activity mActivity, String permission) {
         if (!isMNC()) {
             return true;
         }
-        return activity.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED;
+        return mActivity.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED;
     }
 
     public static boolean isMNC() {

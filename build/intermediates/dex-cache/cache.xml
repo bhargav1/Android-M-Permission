@@ -2,11 +2,39 @@
 <items version="2" >
 
     <item
-        jar="/Users/bhargavsuthar/AndroidExternalLib/MobiquityPermissionDemo/app/build/intermediates/exploded-aar/MobiquityPermissionDemo/marshmallowpermission/unspecified/jars/classes.jar"
+        jar="/Users/bhargavsuthar/AndroidExternalLib/Android-M-Permission/app/build/intermediates/exploded-aar/Android-M-Permission/marshmallowpermission/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="f4d07ab25f9832019b33796d0c636b05b190a10b">
-        <dex dex="/Users/bhargavsuthar/AndroidExternalLib/MobiquityPermissionDemo/app/build/intermediates/pre-dexed/debug/classes-fb03c2f187aef4bef3ffd1b6dd37fb0d1554b23e.jar" />
+        sha1="69f043f45752601299b76019429cb45183fa7e1a">
+        <dex dex="/Users/bhargavsuthar/AndroidExternalLib/Android-M-Permission/app/build/intermediates/pre-dexed/debug/classes-1f20b67b98ff9c2eaa24b101a37faf0928e66e78.jar" />
+    </item>
+    <item
+        jar="/Users/bhargavsuthar/AndroidExternalLib/Android-M-Permission/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/bhargavsuthar/AndroidExternalLib/Android-M-Permission/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-7078be55290aeacc9f68c4998716245eba1c5e0e.jar" />
+    </item>
+    <item
+        jar="/Users/bhargavsuthar/AndroidExternalLib/Android-M-Permission/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/bhargavsuthar/AndroidExternalLib/Android-M-Permission/app/build/intermediates/pre-dexed/debug/classes-88b5cb2bb4004200baa051f8fc515513ac2911ad.jar" />
+    </item>
+    <item
+        jar="/Users/bhargavsuthar/AndroidExternalLib/Android-M-Permission/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/bhargavsuthar/AndroidExternalLib/Android-M-Permission/app/build/intermediates/pre-dexed/debug/classes-34c08e524fd66d1fcdd2fd6787506ab2debeafc9.jar" />
+    </item>
+    <item
+        jar="/Users/bhargavsuthar/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/bhargavsuthar/AndroidExternalLib/Android-M-Permission/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-79ada438bfafaade725ae55cc041a1b611012012.jar" />
     </item>
 
 </items>
