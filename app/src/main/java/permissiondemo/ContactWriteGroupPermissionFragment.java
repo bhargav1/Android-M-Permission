@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.domo.permissiondemo.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import permission.utility.PermissionUtil;
 
@@ -17,22 +19,25 @@ import permission.utility.PermissionUtil;
  */
 public class ContactWriteGroupPermissionFragment extends PermissionFragment {
 
-    private static final int REQUEST_PERMISSION_GROUP = 111;
+    private static final int REQUEST_PERMISSION_GROUP = 132;
 
-    public static ContactWriteGroupPermissionFragment newInstance(){
-        return  new ContactWriteGroupPermissionFragment();
+    public static ContactWriteGroupPermissionFragment newInstance() {
+        return new ContactWriteGroupPermissionFragment();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_demo, container, false);
-        boolean isGrantedPermission = PermissionUtil.hasSelfPermission(getActivity(), new String[]{Manifest.permission_group.CONTACTS});
-        if(!isGrantedPermission){
-            requestPermissions(new String[]{Manifest.permission_group.CONTACTS}, REQUEST_PERMISSION_GROUP);
-        } else {
-            ((TextView)rootView.findViewById(R.id.section_label)).setText("Group of Contact permissions already granted !!!");
-        }
+        List<String> mPermissions = new ArrayList<String>();
+        mPermissions.add(Manifest.permission.READ_CONTACTS);
+        mPermissions.add(Manifest.permission.CAMERA);
+        mPermissions.add(Manifest.permission.WRITE_CONTACTS);
+
+        List<String> notGrantedList = PermissionUtil.getListOfNotGrandtedPermission(getActivity(), mPermissions);
+
+        requestPermissions(notGrantedList.toArray(new String[notGrantedList.size()]), REQUEST_PERMISSION_GROUP);
+
         return rootView;
     }
 
