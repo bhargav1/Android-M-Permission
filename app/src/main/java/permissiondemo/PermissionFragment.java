@@ -2,7 +2,7 @@ package permissiondemo;
 
 import android.support.v4.app.Fragment;
 
-import permission.state.PermissionListener;
+import permission.PermissionListener;
 
 /**
  * Created by bhargavsuthar on 9/22/15.

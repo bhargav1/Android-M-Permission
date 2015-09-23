@@ -1,4 +1,4 @@
-package permission.state;
+package permission;
 
 import android.support.v4.app.ActivityCompat.OnRequestPermissionsResultCallback;
 
