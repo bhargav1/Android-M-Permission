@@ -52,9 +52,6 @@ public class DemoActivity extends AppCompatActivity
         } else if (position == 3) {
             newFragment = GPSCoaseLocationFragment.newInstance();
             restoreActionBar(getString(R.string.title_section4));
-        } else if (position == 4) {
-            newFragment = InternetPermissionFragment.newInstance();
-            restoreActionBar(getString(R.string.title_section5));
         }
          fragmentManager.beginTransaction()
                 .replace(R.id.container, newFragment)
