@@ -1,4 +1,4 @@
-package mobiquitypermissiondeom;
+package permissiondemo;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -21,7 +21,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.mobiquity.mobiquitypermissiondemo.R;
+import com.domo.permissiondemo.R;
+
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.

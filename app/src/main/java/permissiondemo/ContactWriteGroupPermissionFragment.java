@@ -1,4 +1,4 @@
-package mobiquitypermissiondeom;
+package permissiondemo;
 
 import android.Manifest;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mobiquity.mobiquitypermissiondemo.R;
+import com.domo.permissiondemo.R;
 
 import permission.utility.PermissionUtil;
 

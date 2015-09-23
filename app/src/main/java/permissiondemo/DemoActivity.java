@@ -1,4 +1,4 @@
-package mobiquitypermissiondeom;
+package permissiondemo;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,7 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 
-import com.mobiquity.mobiquitypermissiondemo.R;
+import com.domo.permissiondemo.R;
 
 public class DemoActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
