@@ -35,9 +35,9 @@ public class ContactWriteGroupPermissionFragment extends PermissionFragment {
         mPermissions.add(Manifest.permission.WRITE_CONTACTS);
 
         List<String> notGrantedList = PermissionUtil.getListOfNotGrandtedPermission(getActivity(), mPermissions);
-
-        requestPermissions(notGrantedList.toArray(new String[notGrantedList.size()]), REQUEST_PERMISSION_GROUP);
-
+        if (notGrantedList != null && notGrantedList.size() > 0) {
+            requestPermissions(PermissionUtil.getPermissionStringArray(notGrantedList), REQUEST_PERMISSION_GROUP);
+        }
         return rootView;
     }
 
@@ -45,6 +45,7 @@ public class ContactWriteGroupPermissionFragment extends PermissionFragment {
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case REQUEST_PERMISSION_GROUP:
+                ////Todo handle when user agree with permission
                 break;
             default:
                 super.onRequestPermissionsResult(requestCode, permissions, grantResults);
