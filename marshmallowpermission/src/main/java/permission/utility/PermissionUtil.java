@@ -7,20 +7,38 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v7.app.AlertDialog;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by bhargavsuthar on 9/22/15.
  */
+@TargetApi(23)
 public class PermissionUtil {
 
 
-    private static List<String> getListOfGrantedPermission(){
-        return null;
+    public static List<String> getListOfGrantedPermission(Activity activity, List<String> permissions){
+        List<String> mGrantedPermissions = new ArrayList<String>();
+        if(permissions.size() > 0){
+            for(String mPermission : permissions){
+                if(activity.checkSelfPermission(mPermission) == PackageManager.PERMISSION_GRANTED) {
+                    mGrantedPermissions.add(mPermission);
+                }
+            }
+        }
+        return mGrantedPermissions;
     }
 
-    private static List<String> getListOfNotGrandtedPermission() {
-        return null;
+    public static List<String> getListOfNotGrandtedPermission(Activity activity, List<String> permissions) {
+        List<String> mGrantedPermissions = new ArrayList<String>();
+        if(permissions.size() > 0){
+            for(String mPermission : permissions){
+                if(activity.checkSelfPermission(mPermission) != PackageManager.PERMISSION_GRANTED) {
+                    mGrantedPermissions.add(mPermission);
+                }
+            }
+        }
+        return mGrantedPermissions;
     }
 
     public static boolean verifyPermissions(int[] grantResults) {
@@ -32,7 +50,6 @@ public class PermissionUtil {
         return true;
     }
 
-    @TargetApi(23)
     public static boolean hasSelfPermission(Activity mActivity, String[] permissions) {
         if (!isMNC()) {
             return true;
@@ -47,7 +64,6 @@ public class PermissionUtil {
         return true;
     }
 
-    @TargetApi(23)
     public static boolean hasSelfPermission(Activity mActivity, String permission) {
         if (!isMNC()) {
             return true;
@@ -66,6 +82,35 @@ public class PermissionUtil {
                 .setNegativeButton("Cancel", null)
                 .create()
                 .show();
+    }
+
+    public static List<String> addPermission(List<String> permissionsList, String permission, Activity activity) {
+        if (isMNC()) {
+            if (activity.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
+                permissionsList.add(permission);
+            }
+        }
+        return  permissionsList;
+    }
+
+    public static boolean isPermissionGranted(Activity mActivity, String permission) {
+        if (!isMNC()) {
+            return true;
+        }
+        if(mActivity.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean checkForRequestPermissionRationale(Activity activity, String permission) {
+        if (!isMNC()) {
+            return true;
+        }
+        if(!activity.shouldShowRequestPermissionRationale(permission)){
+            return false;
+        }
+        return true;
     }
 
 }
